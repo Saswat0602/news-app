@@ -21,6 +21,7 @@ export default class App extends Component {
       <div>
         <Router>
           <LoadingBar
+          height={3}
             color="#f11946"
             progress={this.state.progress }
             // onLoaderFinished={() => setProgress(0)}
@@ -30,7 +31,7 @@ export default class App extends Component {
             <Route
               path="/"
               element={
-                <News setProgress={setProgress}
+                <News setProgress={this.setProgress}
                   key="general"
                   pageSize={9}
                   country="us"
@@ -41,7 +42,7 @@ export default class App extends Component {
             <Route
               path="/business"
               element={
-                <News setProgress={setProgress}
+                <News setProgress={this.setProgress}
                   key="business"
                   pageSize={9}
                   country="us"
@@ -52,7 +53,7 @@ export default class App extends Component {
             <Route
               path="/entertainment"
               element={
-                <News setProgress={setProgress}
+                <News setProgress={this.setProgress}
                   key="entertainment"
                   pageSize={9}
                   country="us"
@@ -63,7 +64,7 @@ export default class App extends Component {
             <Route
               path="/health"
               element={
-                <News setProgress={setProgress}
+                <News setProgress={this.setProgress}
                   key="health"
                   pageSize={9}
                   country="us"
@@ -74,7 +75,7 @@ export default class App extends Component {
             <Route
               path="/science"
               element={
-                <News setProgress={setProgress}
+                <News setProgress={this.setProgress}
                   key="science"
                   pageSize={9}
                   country="us"
@@ -85,7 +86,7 @@ export default class App extends Component {
             <Route
               path="/sports"
               element={
-                <News setProgress={setProgress}
+                <News setProgress={this.setProgress}
                   key="sports"
                   pageSize={9}
                   country="us"
@@ -96,7 +97,7 @@ export default class App extends Component {
             <Route
               path="/technology"
               element={
-                <News setProgress={setProgress}
+                <News setProgress={this.setProgress}
                   key="technology"
                   pageSize={9}
                   country="us"
